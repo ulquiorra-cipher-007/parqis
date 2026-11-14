@@ -23,8 +23,6 @@
 
   <!-- Mobile Bottom Navigation (Visible on Handheld / Mobile devices) -->
   {#if !page.url.pathname.startsWith('/auth')}
-    <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-50">
-      <BottomNav />
-    </nav>
+    <BottomNav />
   {/if}
 </div>

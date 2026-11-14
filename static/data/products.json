@@ -1,365 +1,376 @@
 [
   {
     "id": "prod_1",
-    "title": "Wishlist",
+    "title": "Women Solids Tank top S \u00b7 black",
     "price": 349,
     "compareAtPrice": 1199,
     "discountPercent": 71,
-    "image": "./Online Shopping &amp; Entertainment - PARQIS(ADDRESS)_files/home-like.svg",
-    "category": "WESTERN",
+    "image": "/images/1792739016099-0orsgt.jpg",
+    "category": "MEN",
     "rating": 4.5,
-    "reviews": 128
+    "reviews": 80
   },
   {
     "id": "prod_2",
-    "title": "Women Solids Tank top",
+    "title": "Women Solids Tank top XL \u00b7 olive",
     "price": 349,
     "compareAtPrice": 1199,
     "discountPercent": 71,
     "image": "/images/1792739015708-5no2nz.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 135
+    "reviews": 87
   },
   {
     "id": "prod_3",
-    "title": "Men Solids Pullover",
+    "title": "Men Solids Pullover 2XL \u00b7 white",
     "price": 449,
     "compareAtPrice": 1399,
     "discountPercent": 68,
     "image": "/images/1793610179205-4e3i31.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 142
+    "reviews": 94
   },
   {
     "id": "prod_4",
-    "title": "Men Solids Sweatshirt",
+    "title": "Men Solids Sweatshirt M \u00b7 Bottle Green",
     "price": 599,
     "compareAtPrice": 1999,
     "discountPercent": 70,
     "image": "/images/1792730492731-zhxyia.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 149
+    "reviews": 101
   },
   {
     "id": "prod_5",
-    "title": "Men Color Block Sweatshirt",
+    "title": "Men Color Block Sweatshirt M \u00b7 white",
     "price": 599,
     "compareAtPrice": 1999,
     "discountPercent": 70,
     "image": "/images/1792730509501-vk6te3.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 156
+    "reviews": 108
   },
   {
     "id": "prod_6",
-    "title": "Women Solids Trousers",
+    "title": "Women Solids Trousers XS \u00b7 white",
     "price": 499,
     "compareAtPrice": 1499,
     "discountPercent": 67,
     "image": "/images/1792835612836-6ue6t9.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 163
+    "reviews": 115
   },
   {
     "id": "prod_7",
-    "title": "Women Solids Bodycon Dress",
+    "title": "Women Solids Bodycon Dress M \u00b7 White",
     "price": 449,
     "compareAtPrice": 1499,
     "discountPercent": 70,
     "image": "/images/1792820919674-mrthis.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 170
+    "reviews": 122
   },
   {
     "id": "prod_8",
-    "title": "Women Embroidered Suit Set",
+    "title": "Men Solids Pullover 2XL \u00b7 white",
+    "price": 449,
+    "compareAtPrice": 1399,
+    "discountPercent": 68,
+    "image": "/images/1793610179205-4e3i31.jpg",
+    "category": "MEN",
+    "rating": 4.5,
+    "reviews": 129
+  },
+  {
+    "id": "prod_9",
+    "title": "Women Embroidered Suit Set M \u00b7 blue",
     "price": 1899,
     "compareAtPrice": 4499,
     "discountPercent": 58,
     "image": "/images/1789069100054-zzsc4z.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 177
+    "reviews": 136
   },
   {
-    "id": "prod_9",
-    "title": "Women Embroidered Kurta pant Set",
+    "id": "prod_10",
+    "title": "Women Embroidered Kurta pant Set L \u00b7 black",
     "price": 1999,
     "compareAtPrice": 4599,
     "discountPercent": 57,
     "image": "/images/1789068817876-57pv85.jpg",
-    "category": "MEN",
+    "category": "ETHNIC",
     "rating": 4.5,
-    "reviews": 184
+    "reviews": 143
   },
   {
-    "id": "prod_10",
-    "title": "Women Floral Suit Set",
+    "id": "prod_11",
+    "title": "Women Floral Suit Set 2XL \u00b7 Lavender",
     "price": 1289,
     "compareAtPrice": 6699,
     "discountPercent": 81,
     "image": "/images/1788955889057-6fgeen.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 191
+    "reviews": 150
   },
   {
-    "id": "prod_11",
-    "title": "Women florals A-Line Dress",
+    "id": "prod_12",
+    "title": "Women florals A-Line Dress XL \u00b7 Blue",
     "price": 1899,
     "compareAtPrice": 4199,
     "discountPercent": 55,
     "image": "/images/1789068854366-8ikcrd.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 198
+    "reviews": 157
   },
   {
-    "id": "prod_12",
-    "title": "Women Abstract Top",
+    "id": "prod_13",
+    "title": "Women Abstract Top XS \u00b7 red",
     "price": 1199,
     "compareAtPrice": 2799,
     "discountPercent": 57,
     "image": "/images/1789069746846-uibts0.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 205
+    "reviews": 164
   },
   {
-    "id": "prod_13",
-    "title": "Women Solids Top",
+    "id": "prod_14",
+    "title": "Women Solids Top S \u00b7 blue",
     "price": 999,
     "compareAtPrice": 2399,
     "discountPercent": 58,
     "image": "/images/1789069761214-p6hbif.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 212
+    "reviews": 171
   },
   {
-    "id": "prod_14",
-    "title": "Women printed Top",
+    "id": "prod_15",
+    "title": "Women printed Top M \u00b7 Light Blue",
     "price": 699,
     "compareAtPrice": 2099,
     "discountPercent": 67,
     "image": "/images/1788956033409-icgxby.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 219
+    "reviews": 178
   },
   {
-    "id": "prod_15",
-    "title": "Women Solids Tank Top",
+    "id": "prod_16",
+    "title": "Women Solids Tank Top XS \u00b7 red",
     "price": 299,
     "compareAtPrice": 1099,
     "discountPercent": 73,
     "image": "/images/1791624691026-4slqm7.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 226
+    "reviews": 185
   },
   {
-    "id": "prod_16",
-    "title": "Women Solids Crop Top",
+    "id": "prod_17",
+    "title": "Women Solids Crop Top XS \u00b7 black",
     "price": 299,
     "compareAtPrice": 1099,
     "discountPercent": 73,
     "image": "/images/1791624697021-1yjxj3.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 233
+    "reviews": 192
   },
   {
-    "id": "prod_17",
-    "title": "Women stripes Top",
+    "id": "prod_18",
+    "title": "Women stripes Top XS \u00b7 Grey",
     "price": 699,
     "compareAtPrice": 1699,
     "discountPercent": 59,
     "image": "/images/1789069723128-1xp6dz.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 240
+    "reviews": 199
   },
   {
-    "id": "prod_18",
-    "title": "Women Embroidered Kurta Sharara Set",
+    "id": "prod_19",
+    "title": "Women Embroidered Kurta pant Set L \u00b7 black",
+    "price": 1999,
+    "compareAtPrice": 4599,
+    "discountPercent": 57,
+    "image": "/images/1789068817876-57pv85.jpg",
+    "category": "ETHNIC",
+    "rating": 4.5,
+    "reviews": 206
+  },
+  {
+    "id": "prod_20",
+    "title": "Women Embroidered Kurta Sharara Set M \u00b7 green",
     "price": 2999,
     "compareAtPrice": 7399,
     "discountPercent": 59,
     "image": "/images/1789069111308-3fhag4.jpg",
-    "category": "MEN",
+    "category": "ETHNIC",
     "rating": 4.5,
-    "reviews": 247
+    "reviews": 213
   },
   {
-    "id": "prod_19",
-    "title": "Women Ikat Co-ord Set",
+    "id": "prod_21",
+    "title": "Women Ikat Co-ord Set L \u00b7 Cream",
     "price": 1799,
     "compareAtPrice": 4899,
     "discountPercent": 63,
     "image": "/images/1788955156394-lmc7fb.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 254
+    "reviews": 220
   },
   {
-    "id": "prod_20",
-    "title": "Women bandhani Suit Set",
+    "id": "prod_22",
+    "title": "Women bandhani Suit Set M \u00b7 Red",
     "price": 2199,
     "compareAtPrice": 5499,
     "discountPercent": 60,
     "image": "/images/1788955975304-nk0gye.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 261
+    "reviews": 227
   },
   {
-    "id": "prod_21",
-    "title": "Women Paisley Top",
+    "id": "prod_23",
+    "title": "Women Paisley Top XS \u00b7 white",
     "price": 799,
     "compareAtPrice": 1899,
     "discountPercent": 58,
     "image": "/images/1789069623066-k4yycn.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 268
+    "reviews": 84
   },
   {
-    "id": "prod_22",
-    "title": "Women polka dots Top",
+    "id": "prod_24",
+    "title": "Women polka dots Top XS \u00b7 beige",
     "price": 799,
     "compareAtPrice": 1899,
     "discountPercent": 58,
     "image": "/images/1789069623125-mu3sec.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 275
+    "reviews": 91
   },
   {
-    "id": "prod_23",
-    "title": "Women Geometric Suit Set",
+    "id": "prod_25",
+    "title": "Women Geometric Suit Set L \u00b7 Maroon",
     "price": 2099,
     "compareAtPrice": 5199,
     "discountPercent": 60,
     "image": "/images/1788955924785-f2m6t7.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 282
+    "reviews": 98
   },
   {
-    "id": "prod_24",
-    "title": "Women ethnic motifs Suit Set",
+    "id": "prod_26",
+    "title": "Women ethnic motifs Suit Set 2XL \u00b7 Green",
     "price": 1999,
     "compareAtPrice": 4999,
     "discountPercent": 60,
     "image": "/images/1788955972029-qltsuk.jpg",
-    "category": "MEN",
+    "category": "ETHNIC",
     "rating": 4.5,
-    "reviews": 289
+    "reviews": 105
   },
   {
-    "id": "prod_25",
-    "title": "Women Solids Straight Kurti",
+    "id": "prod_27",
+    "title": "Women Solids Straight Kurti XS \u00b7 purple",
     "price": 399,
     "compareAtPrice": 1199,
     "discountPercent": 67,
     "image": "/images/1792844462749-00zluj.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 296
+    "reviews": 112
   },
   {
-    "id": "prod_26",
-    "title": "Women Floral Co-ord Set",
+    "id": "prod_28",
+    "title": "Women Embroidered Kurta pant Set L \u00b7 black",
+    "price": 1999,
+    "compareAtPrice": 4599,
+    "discountPercent": 57,
+    "image": "/images/1789068817876-57pv85.jpg",
+    "category": "ETHNIC",
+    "rating": 4.5,
+    "reviews": 119
+  },
+  {
+    "id": "prod_29",
+    "title": "Women Floral Co-ord Set XL \u00b7 pink",
     "price": 1299,
     "compareAtPrice": 3199,
     "discountPercent": 59,
     "image": "/images/1788955740962-9umm6s.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 303
+    "reviews": 126
   },
   {
-    "id": "prod_27",
-    "title": "Women florals Top",
+    "id": "prod_30",
+    "title": "Women florals Top S \u00b7 beige",
     "price": 799,
     "compareAtPrice": 1899,
     "discountPercent": 58,
     "image": "/images/1789069611087-4tl9hw.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 310
+    "reviews": 133
   },
   {
-    "id": "prod_28",
-    "title": "Women Abstract Suit Set",
+    "id": "prod_31",
+    "title": "Women Abstract Suit Set M \u00b7 Teal",
     "price": 1019,
     "compareAtPrice": 5399,
     "discountPercent": 81,
     "image": "/images/1788955874583-zswtzv.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 317
+    "reviews": 140
   },
   {
-    "id": "prod_29",
-    "title": "Women Solids Off shoulder Dress",
+    "id": "prod_32",
+    "title": "Women ethnic motifs Suit Set M \u00b7 Green",
+    "price": 1999,
+    "compareAtPrice": 4999,
+    "discountPercent": 60,
+    "image": "/images/1788955972029-qltsuk.jpg",
+    "category": "ETHNIC",
+    "rating": 4.5,
+    "reviews": 147
+  },
+  {
+    "id": "prod_33",
+    "title": "Women Embroidered Suit Set M \u00b7 blue",
+    "price": 1899,
+    "compareAtPrice": 4499,
+    "discountPercent": 58,
+    "image": "/images/1789069100054-zzsc4z.jpg",
+    "category": "MEN",
+    "rating": 4.5,
+    "reviews": 154
+  },
+  {
+    "id": "prod_34",
+    "title": "Women Solids Off shoulder Dress M \u00b7 Maroon",
     "price": 499,
     "compareAtPrice": 1699,
     "discountPercent": 71,
     "image": "/images/1792820928403-eg65eu.jpg",
     "category": "MEN",
     "rating": 4.5,
-    "reviews": 324
-  },
-  {
-    "id": "prod_30",
-    "title": "Go back",
-    "price": 349,
-    "compareAtPrice": 1199,
-    "discountPercent": 71,
-    "image": "./Online Shopping &amp; Entertainment - PARQIS(CART)_files/mingcute_down-line.svg",
-    "category": "WESTERN",
-    "rating": 4.5,
-    "reviews": 331
-  },
-  {
-    "id": "prod_31",
-    "title": "Men Solids Polo T-Shirt - 1",
-    "price": 205,
-    "compareAtPrice": 1399,
-    "discountPercent": 85,
-    "image": "/images/1793611476751-z3y5g7.jpg",
-    "category": "MEN",
-    "rating": 4.5,
-    "reviews": 338
-  },
-  {
-    "id": "prod_32",
-    "title": "Like",
-    "price": 1399,
-    "compareAtPrice": 4899,
-    "discountPercent": 71,
-    "image": "./Online Shopping &amp; Entertainment - PARQIS(TRENDS)_files/reel-like.svg",
-    "category": "WESTERN",
-    "rating": 4.5,
-    "reviews": 345
-  },
-  {
-    "id": "prod_33",
-    "title": "Cart",
-    "price": 2199,
-    "compareAtPrice": 5499,
-    "discountPercent": 60,
-    "image": "./Online Shopping &amp; Entertainment - PARQIS(TRENDS)_files/mingcute_shopping-cart-2-line (1).svg",
-    "category": "WESTERN",
-    "rating": 4.5,
-    "reviews": 352
+    "reviews": 161
   }
 ]

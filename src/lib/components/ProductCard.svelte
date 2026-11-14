@@ -1,8 +1,8 @@
 <script>
   import { addToCart } from '$lib/stores/cart.js';
 
-  export let product;
-  let added = false;
+  let { product } = $props();
+  let added = $state(false);
 
   function handleAdd(e) {
     e.stopPropagation();
@@ -14,55 +14,45 @@
   }
 </script>
 
-<div class="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-xs hover:shadow-md transition group flex flex-col justify-between">
-  <!-- Image Container -->
-  <div class="relative aspect-[3/4] bg-gray-50 overflow-hidden">
+<article class="w-full shrink-0 cursor-pointer transition-transform duration-150 hover:-translate-y-0.5 active:translate-y-0">
+  <div class="relative overflow-hidden rounded-bl-[4px] rounded-br-[16px] rounded-tl-[4px] rounded-tr-[4px] shadow-[0_2px_10px_rgba(0,0,0,0.05)] bg-gray-50 aspect-[3/4]">
     <img 
-      src={product.image} 
       alt={product.title} 
-      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      class="h-full w-full object-cover" 
+      src={product.image}
       loading="lazy"
-      on:error={(e) => { e.target.src = 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400'; }}
+      onerror={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400'; }}
     />
     
-    {#if product.discountPercent > 0}
-      <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-xs">
-        {product.discountPercent}% OFF
-      </span>
-    {/if}
-
     <button 
-      type="button"
-      on:click={handleAdd}
-      class="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-white/90 text-gray-800 shadow-md flex items-center justify-center hover:bg-[#A70F2F] hover:text-white transition active:scale-90"
-      title="Add to Cart"
+      type="button" 
+      onclick={handleAdd}
+      class="absolute bottom-[0px] right-[0px] z-20 flex size-[28px] items-center justify-center rounded-full bg-white/80 backdrop-blur-[2px] text-[#A92645] transition-all duration-200 hover:scale-105 shadow-[0_2px_18px_rgba(200,200,200,0.40),inset_0_1px_4px_rgba(255,255,255,1)] active:scale-95 cursor-pointer" 
+      aria-label="Add {product.title} to cart"
+      title="Add to cart"
     >
       {#if added}
-        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        <svg class="h-3.5 w-3.5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
         </svg>
       {:else}
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-        </svg>
+        <img alt="Add to cart" class="h-[13px] w-[13px] object-contain" src="/add-to-cart.svg" />
       {/if}
     </button>
   </div>
 
-  <!-- Content -->
-  <div class="p-3 flex flex-col flex-1 justify-between">
-    <div>
-      <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{product.category}</span>
-      <h3 class="text-xs font-semibold text-gray-900 line-clamp-1 mt-0.5 group-hover:text-[#A70F2F] transition-colors">
-        {product.title}
-      </h3>
-    </div>
-
-    <div class="mt-2 flex items-baseline gap-1.5">
-      <span class="text-sm font-bold text-gray-900">₹{product.price}</span>
+  <div class="flex flex-col space-y-1 pt-2">
+    <p class="line-clamp-2 text-xs sm:text-sm leading-[1.15] text-[#4A4640]">
+      {product.title}
+    </p>
+    <p class="text-xs sm:text-sm font-semibold text-black">
+      ₹{product.price}
       {#if product.compareAtPrice}
-        <span class="text-[11px] text-gray-400 line-through">₹{product.compareAtPrice}</span>
+        <span class="font-light text-black/50 line-through text-[11px] sm:text-xs">₹{product.compareAtPrice}</span>
       {/if}
-    </div>
+      {#if product.discountPercent}
+        <span class="font-light text-[11px] sm:text-xs text-[#0CB72E]">{product.discountPercent}% OFF</span>
+      {/if}
+    </p>
   </div>
-</div>
+</article>

@@ -1,75 +1,68 @@
 <script>
   import { page } from '$app/state';
   import { cart } from '$lib/stores/cart.js';
-  import { user } from '$lib/stores/user.js';
 
   let currentPath = $derived(page.url.pathname);
   let cartCount = $derived($cart.reduce((sum, item) => sum + item.quantity, 0));
 </script>
 
-<div class="w-full bg-white border-t border-gray-200 py-2 px-4 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
-  <div class="max-w-[480px] mx-auto flex items-center justify-around">
-    <!-- Home -->
+<nav class="lg:hidden fixed bottom-4 left-1/2 z-40 w-[343px] -translate-x-1/2 rounded-[50px] bg-white/20 px-[10px] py-[8px] shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-md">
+  <div class="flex items-center justify-between">
+    <!-- Home Tab -->
     <a 
       href="/" 
-      class="flex flex-col items-center gap-1 transition-colors {currentPath === '/' ? 'text-[#A70F2F]' : 'text-gray-500 hover:text-black'}"
+      class="relative flex cursor-pointer flex-col items-center py-1 transition active:scale-95 {currentPath === '/' ? 'w-[66px] rounded-[50px] bg-black/45 md:bg-white/55 text-[#ff4d79] shadow-[0_2px_8px_rgba(0,0,0,0.25)]' : 'w-[64px] text-white hover:text-[#ff4d79]'}"
     >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-      <span class="text-[10px] font-medium">Home</span>
+      <span class="relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="h-[20px] w-[20px]">
+          <path d="M8.97667 2.24011C9.25004 2.02744 9.58287 1.90522 9.92891 1.89044C10.2749 1.87565 10.617 1.96904 10.9075 2.15761L11.0233 2.24095L18.01 7.67428C18.6108 8.14178 18.3183 9.08428 17.5942 9.16178L17.4975 9.16678H16.6667V15.8334C16.6668 16.2539 16.508 16.6589 16.2221 16.9672C15.9362 17.2756 15.5443 17.4644 15.125 17.4959L15 17.5001H5C4.57966 17.5 4.17488 17.3411 3.86674 17.0553C3.5586 16.7694 3.36986 16.3776 3.33833 15.9584L3.33333 15.8334V9.16678H2.5025C1.74167 9.16678 1.3925 8.24345 1.91667 7.73761L1.99 7.67428L8.97667 2.24011ZM10 3.55595L4.6875 7.68761C4.87833 7.84178 5 8.07761 5 8.34178V15.8334H7.5V11.6668C7.5 11.0037 7.76339 10.3679 8.23223 9.89901C8.70107 9.43017 9.33696 9.16678 10 9.16678C10.663 9.16678 11.2989 9.43017 11.7678 9.89901C12.2366 10.3679 12.5 11.0037 12.5 11.6668V15.8334H15V8.34178C15 8.07761 15.1217 7.84178 15.3125 7.68761L10 3.55595ZM10 10.8334C9.77899 10.8334 9.56703 10.9212 9.41075 11.0775C9.25447 11.2338 9.16667 11.4458 9.16667 11.6668V15.8334H10.8333V11.6668C10.8333 11.4458 10.7455 11.2338 10.5893 11.0775C10.433 10.9212 10.221 10.8334 10 10.8334Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="text-[10px] font-semibold {currentPath === '/' ? 'text-[#ff4d79]' : 'text-white'}">Home</span>
     </a>
 
-    <!-- Trends / Reels -->
+    <!-- Trends Tab -->
     <a 
       href="/trends" 
-      class="flex flex-col items-center gap-1 transition-colors {currentPath.startsWith('/trends') ? 'text-[#A70F2F]' : 'text-gray-500 hover:text-black'}"
+      class="relative flex cursor-pointer flex-col items-center py-1 transition active:scale-95 {currentPath.startsWith('/trends') ? 'w-[66px] rounded-[50px] bg-black/45 md:bg-white/55 text-[#ff4d79] shadow-[0_2px_8px_rgba(0,0,0,0.25)]' : 'w-[64px] text-white hover:text-[#ff4d79]'}"
     >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      <span class="text-[10px] font-medium">Trends</span>
+      <span class="relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="h-[20px] w-[20px]">
+          <path d="M10 1.6665C12.1333 1.6665 14.0817 2.46984 15.5558 3.789C15.6385 3.86167 15.706 3.95 15.7544 4.04889C15.8027 4.14779 15.831 4.25528 15.8376 4.36517C15.8442 4.47506 15.8289 4.58516 15.7927 4.68912C15.7565 4.79308 15.7001 4.88883 15.6266 4.97085C15.5532 5.05287 15.4642 5.11952 15.3649 5.16696C15.2656 5.21441 15.1578 5.2417 15.0479 5.24726C14.9379 5.25282 14.828 5.23655 14.7243 5.19937C14.6207 5.1622 14.5255 5.10486 14.4442 5.03067C13.4849 4.17274 12.2979 3.61079 11.0263 3.41266C9.75468 3.21452 8.45292 3.38866 7.27813 3.91407C6.10333 4.43948 5.10572 5.29368 4.4057 6.37358C3.70569 7.45348 3.3332 8.7129 3.3332 9.99984C3.3332 11.2868 3.70569 12.5462 4.4057 13.6261C5.10572 14.706 6.10333 15.5602 7.27813 16.0856C8.45292 16.611 9.75468 17.852 11.0263 16.587C12.2979 16.3889 13.4849 15.8269 14.4442 14.969C14.5255 14.8948 14.6207 14.8375 14.7243 14.8003C14.828 14.7631 14.9379 14.7469 15.0479 14.7524C15.1578 14.758 15.2656 14.7853 15.3649 14.8327C15.4642 14.8802 15.5532 14.9468 15.6266 15.0288C15.7001 15.1108 15.7565 15.2066 15.7927 15.3106C15.8289 15.4145 15.8442 15.5246 15.8376 15.6345C15.831 15.7444 15.8027 15.8519 15.7544 15.9508C15.706 16.0497 15.6385 16.138 15.5558 16.2107C14.0292 17.5795 12.0504 18.3355 10 18.3332C5.39751 18.3332 1.66667 14.6023 1.66667 9.99984C1.66667 5.39734 5.39751 1.6665 10 1.6665ZM9.03917 8.33734L9.01667 8.7265L9.00001 9.164L8.99001 9.64734V10.1623L9.00001 10.6457L9.01667 11.0832L9.03917 11.4723L9.38667 11.2973L9.575 11.199L9.98167 10.9807L10.4233 10.7315L10.8583 10.474L11.06 10.3507L11.43 10.1173L11.755 9.90484L11.4283 9.69067L11.0583 9.4565L10.645 9.2065C10.4267 9.07733 10.2064 8.95148 9.98417 8.829L9.57751 8.61067L9.20834 8.4215L9.03917 8.33734Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="text-[10px] {currentPath.startsWith('/trends') ? 'font-semibold text-[#ff4d79]' : 'text-white'}">Trends</span>
     </a>
 
-    <!-- Categories -->
+    <!-- Categories Tab -->
     <a 
       href="/categories" 
-      class="flex flex-col items-center gap-1 transition-colors {currentPath.startsWith('/categories') ? 'text-[#A70F2F]' : 'text-gray-500 hover:text-black'}"
+      class="relative flex cursor-pointer flex-col items-center py-1 transition active:scale-95 {currentPath.startsWith('/categories') ? 'w-[66px] rounded-[50px] bg-black/45 md:bg-white/55 text-[#ff4d79] shadow-[0_2px_8px_rgba(0,0,0,0.25)]' : 'w-[64px] text-white hover:text-[#ff4d79]'}"
     >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-      </svg>
-      <span class="text-[10px] font-medium">Categories</span>
+      <span class="relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="h-[20px] w-[20px]">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8333 9.16667C16.2538 9.16653 16.6588 9.32534 16.9671 9.61125C17.2754 9.89716 17.4643 10.289 17.4958 10.7083L17.5 10.8333V15.8333C17.5001 16.2538 17.3413 16.6588 17.0554 16.9671C16.7695 17.2754 16.3776 17.4643 15.9583 17.4958L15.8333 17.5H12.5C12.0795 17.5001 11.6745 17.3413 11.3662 17.0554C11.0579 16.7695 10.869 16.3776 10.8375 15.9583L10.8333 15.8333V10.8333C10.8332 10.4129 10.992 10.0079 11.2779 9.69954C11.5638 9.39123 11.9557 9.20237 12.375 9.17083L12.5 9.16667H15.8333ZM7.5 12.5C7.94203 12.5 8.36595 12.6756 8.67851 12.9882C8.99107 13.3007 9.16667 13.7246 9.16667 14.1667V15.8333C9.16667 16.2754 8.99107 16.6993 8.67851 17.0118C8.36595 17.3244 7.94203 17.5 7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V14.1667C2.5 13.7246 2.67559 13.3007 2.98816 12.9882C3.30072 12.6756 3.72464 12.5 4.16667 12.5H7.5ZM15.8333 10.8333H12.5V15.8333H15.8333V10.8333ZM7.5 14.1667H4.16667V15.8333H7.5V14.1667ZM7.5 2.5C7.94203 2.5 8.36595 2.67559 8.67851 2.98816C8.99107 3.30072 9.16667 3.72464 9.16667 4.16667V9.16667C9.16667 9.60869 8.99107 10.0326 8.67851 10.3452C8.36595 10.6577 7.94203 10.8333 7.5 10.8333H4.16667C3.72464 10.8333 3.30072 10.6577 2.98816 10.3452C2.67559 10.0326 2.5 9.60869 2.5 9.16667V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5ZM7.5 4.16667H4.16667V9.16667H7.5V4.16667ZM15.8333 2.5C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V5.83333C17.5 6.27536 17.3244 6.69928 17.0118 7.01184C16.6993 7.3244 16.2754 7.5 15.8333 7.5H12.5C12.058 7.5 11.634 7.3244 11.3215 7.01184C11.0089 6.69928 10.8333 6.27536 10.8333 5.83333V4.16667C10.8333 3.72464 11.0089 3.30072 11.3215 2.98816C11.634 2.67559 12.058 2.5 12.5 2.5H15.8333ZM15.8333 4.16667H12.5V5.83333H15.8333V4.16667Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="text-[10px] {currentPath.startsWith('/categories') ? 'font-semibold text-[#ff4d79]' : 'text-white'}">Categories</span>
     </a>
 
-    <!-- Cart -->
+    <!-- Cart Tab -->
     <a 
       href="/cart" 
-      class="flex flex-col items-center gap-1 relative transition-colors {currentPath.startsWith('/cart') ? 'text-[#A70F2F]' : 'text-gray-500 hover:text-black'}"
+      class="relative flex cursor-pointer flex-col items-center py-1 transition active:scale-95 {currentPath.startsWith('/cart') ? 'w-[66px] rounded-[50px] bg-black/45 md:bg-white/55 text-[#ff4d79] shadow-[0_2px_8px_rgba(0,0,0,0.25)]' : 'w-[64px] text-white hover:text-[#ff4d79]'}"
     >
-      <div class="relative">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      <span class="relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="h-[20px] w-[20px]">
+          <path d="M7.49999 16.6665C7.721 16.6665 7.93296 16.7543 8.08924 16.9106C8.24552 17.0669 8.33332 17.2788 8.33332 17.4998C8.33332 17.7208 8.24552 17.9328 8.08924 18.0891C7.93296 18.2454 7.721 18.3332 7.49999 18.3332C7.27897 18.3332 7.06701 18.2454 6.91073 18.0891C6.75445 17.9328 6.66665 17.7208 6.66665 17.4998C6.66665 17.2788 6.75445 17.0669 6.91073 16.9106C7.06701 16.7543 7.27897 16.6665 7.49999 16.6665ZM13.3333 16.6665C13.5543 16.6665 13.7663 16.7543 13.9226 16.9106C14.0789 17.0669 14.1667 17.2788 14.1667 17.4998C14.1667 17.7208 14.0789 17.9328 13.9226 18.0891C13.7663 18.2454 13.5543 18.3332 13.3333 18.3332C13.1123 18.3332 12.9003 18.2454 12.7441 18.0891C12.5878 17.9328 12.5 17.7208 12.5 17.4998C12.5 17.2788 12.5878 17.0669 12.7441 16.9106C12.9003 16.7543 13.1123 16.6665 13.3333 16.6665ZM2.91249 2.19233L2.99999 2.25066L4.42332 3.31733C4.66554 3.49908 4.85366 3.74338 4.96749 4.024L5.01749 4.1665H15.7225C15.9484 4.16644 16.172 4.21232 16.3796 4.30134C16.5873 4.39036 16.7747 4.52067 16.9304 4.68434C17.0861 4.84802 17.2069 5.04165 17.2855 5.25346C17.3641 5.46528 17.3988 5.69086 17.3875 5.9165L17.3767 6.03983L16.9958 9.08566C16.8815 10.0023 16.4659 10.8549 15.8142 11.5096C15.1626 12.1642 14.3119 12.5838 13.3958 12.7023L13.2075 12.7215L7.11332 13.2298L7.32999 14.1665H14.5833C14.7957 14.1667 15 14.2481 15.1545 14.3939C15.3089 14.5397 15.4018 14.739 15.4143 14.951C15.4267 15.163 15.3578 15.3718 15.2214 15.5347C15.0851 15.6976 14.8917 15.8022 14.6808 15.8273L14.5833 15.8332H7.32999C6.97632 15.8332 6.63181 15.7208 6.34627 15.5121C6.06074 15.3034 5.84899 15.0093 5.74165 14.6723L5.70582 14.5415L3.42249 4.64983L1.99999 3.58316C1.8374 3.46131 1.72494 3.28424 1.68375 3.08528C1.64256 2.88631 1.67548 2.67915 1.77632 2.50276C1.87716 2.32636 2.03897 2.19289 2.23133 2.12743C2.42368 2.06198 2.63332 2.06905 2.82082 2.14733L2.91249 2.19233ZM15.7225 5.83316H5.40582L6.73499 11.5882L13.0683 11.0607C13.6399 11.0131 14.1778 10.7704 14.5917 10.3734C15.0056 9.97629 15.2704 9.44897 15.3417 8.87983L15.7225 5.83316Z" fill="currentColor"/>
         </svg>
         {#if cartCount > 0}
-          <span class="absolute -top-1.5 -right-2 bg-[#A70F2F] text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+          <span class="absolute -top-1.5 -right-2 min-w-[16px] h-4 px-1 rounded-full bg-[#A92645] text-white text-[9px] font-bold flex items-center justify-center shadow-xs">
             {cartCount}
           </span>
         {/if}
-      </div>
-      <span class="text-[10px] font-medium">Cart</span>
-    </a>
-
-    <!-- Account / Auth -->
-    <a 
-      href={$user?.isAuthenticated ? "/profile" : "/auth/login"} 
-      class="flex flex-col items-center gap-1 transition-colors {currentPath.startsWith('/auth') || currentPath.startsWith('/profile') ? 'text-[#A70F2F]' : 'text-gray-500 hover:text-black'}"
-    >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
-      <span class="text-[10px] font-medium">{$user?.isAuthenticated ? 'Account' : 'Login'}</span>
+      </span>
+      <span class="text-[10px] {currentPath.startsWith('/cart') ? 'font-semibold text-[#ff4d79]' : 'text-white'}">Cart</span>
     </a>
   </div>
-</div>
+</nav>
