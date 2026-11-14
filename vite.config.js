@@ -8,11 +8,12 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit({
-      adapter: adapter(),
-      alias: {
-        '$lib': path.resolve('./src/lib'),
-        '$lib/*': path.resolve('./src/lib/*')
-      }
+      adapter: adapter()
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      '$lib': path.resolve('./src/lib')
+    }
+  }
 });
