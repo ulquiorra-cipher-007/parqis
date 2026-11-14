@@ -1,0 +1,13 @@
+node_modules/
+.svelte-kit/
+.vercel/
+.env
+.env.local
+build/
+dist/
+extracted_data/
+unused_assets/
+*_files/
+*.html
+*.png
+!static/**

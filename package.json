@@ -1,0 +1,29 @@
+{
+  "name": "web_clone_nitr",
+  "version": "1.0.0",
+  "description": "PARQIS Social Commerce Web Clone - SvelteKit & Supabase",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulquiorra-cipher-007/web_clone_nitr.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^8.0.1",
+    "@sveltejs/adapter-vercel": "^7.0.3",
+    "@sveltejs/kit": "^3.2.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "svelte": "^5.57.3",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "lucide-svelte": "^1.0.1"
+  }
+}
