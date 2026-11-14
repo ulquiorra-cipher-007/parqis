@@ -4,7 +4,7 @@
   import { page } from '$app/state';
 
   let cartCount = $derived($cart.reduce((sum, item) => sum + item.quantity, 0));
-  let searchQuery = '';
+  let searchQuery = $state('');
 
   function handleSearch(e) {
     e.preventDefault();
@@ -33,7 +33,7 @@
   </nav>
 
   <!-- Search Input -->
-  <form on:submit={handleSearch} class="flex-1 max-w-md relative">
+  <form onsubmit={handleSearch} class="flex-1 max-w-md relative">
     <input 
       type="text" 
       bind:value={searchQuery}
@@ -67,7 +67,7 @@
           {$user.fullName || $user.phone || 'User'}
         </span>
         <button 
-          on:click={logout}
+          onclick={logout}
           class="text-xs text-rose-600 border border-rose-200 px-2.5 py-1 rounded hover:bg-rose-50 transition"
         >
           Logout

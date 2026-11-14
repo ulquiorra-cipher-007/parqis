@@ -3,16 +3,17 @@
   import { user, updateProfile } from '$lib/stores/user.js';
   import { page } from '$app/state';
 
-  let fullName = '';
-  let email = '';
-  let username = '';
-  let dob = '';
-  let gender = '';
-  let errorMessage = '';
+  let fullName = $state('');
+  let email = $state('');
+  let username = $state('');
+  let dob = $state('');
+  let gender = $state('');
+  let errorMessage = $state('');
 
   let callbackUrl = $derived(page.url.searchParams.get('callbackUrl') || '/');
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault();
     if (!fullName.trim()) {
       errorMessage = 'Please enter your full name';
       return;
@@ -44,7 +45,7 @@
       <h1 class="text-left text-2xl font-bold leading-tight text-black">Sign Up to get started!</h1>
       <p class="text-xs text-gray-500 mt-1">Complete your Parqis profile</p>
 
-      <form on:submit|preventDefault={handleSubmit} class="mt-8 flex flex-col gap-5">
+      <form onsubmit={handleSubmit} class="mt-8 flex flex-col gap-5">
         <!-- Full Name -->
         <div class="h-11 w-full rounded-sm border px-3.5 flex items-center bg-white transition-colors border-gray-300 focus-within:border-[#A70F2F]">
           <input 

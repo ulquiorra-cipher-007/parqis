@@ -14,14 +14,14 @@
     callbackUrl.includes('checkout')
   );
 
-  let phone = '';
-  let step = 'phone'; // 'phone' | 'otp'
-  let otpDigits = ['', '', '', '', '', ''];
-  let generatedOtp = '';
-  let showAutoFillPrompt = false;
-  let isAutoTyping = false;
-  let isVerifying = false;
-  let errorMessage = '';
+  let phone = $state('');
+  let step = $state('phone'); // 'phone' | 'otp'
+  let otpDigits = $state(['', '', '', '', '', '']);
+  let generatedOtp = $state('');
+  let showAutoFillPrompt = $state(false);
+  let isAutoTyping = $state(false);
+  let isVerifying = $state(false);
+  let errorMessage = $state('');
 
   // Triggered when user enters 10-digit number
   function handleContinue() {
@@ -51,7 +51,6 @@
     for (let i = 0; i < 6; i++) {
       await new Promise(res => setTimeout(res, 120));
       otpDigits[i] = generatedOtp[i];
-      otpDigits = [...otpDigits];
     }
 
     isAutoTyping = false;
@@ -65,7 +64,6 @@
   function handleManualInput(e, index) {
     const val = e.target.value.replace(/\D/g, '');
     otpDigits[index] = val ? val[val.length - 1] : '';
-    otpDigits = [...otpDigits];
 
     // Auto-focus next input box
     if (val && index < 5) {
@@ -146,7 +144,7 @@
         <button 
           type="button" 
           disabled={phone.trim().length !== 10}
-          on:click={handleContinue}
+          onclick={handleContinue}
           class="h-11 w-full rounded-sm font-medium text-base transition-all duration-200 flex items-center justify-center shadow-xs {phone.trim().length === 10 ? 'bg-[#A70F2F] text-white hover:bg-[#8F0D28] cursor-pointer' : 'bg-[#E5E7EB] text-black/40 cursor-not-allowed'}"
         >
           Continue
@@ -167,7 +165,7 @@
             <h2 class="text-xl font-bold tracking-tight text-black">Verify OTP</h2>
             <button 
               type="button" 
-              on:click={() => { step = 'phone'; errorMessage = ''; }}
+              onclick={() => { step = 'phone'; errorMessage = ''; }}
               class="text-xs text-rose-600 font-semibold underline"
             >
               Change +91 {phone}
@@ -184,8 +182,8 @@
                 inputmode="numeric"
                 maxlength="1"
                 value={digit}
-                on:input={(e) => handleManualInput(e, i)}
-                on:keydown={(e) => handleKeyDown(e, i)}
+                oninput={(e) => handleManualInput(e, i)}
+                onkeydown={(e) => handleKeyDown(e, i)}
                 class="w-12 h-14 text-center text-xl font-black rounded border border-gray-300 focus:border-[#A70F2F] focus:ring-1 focus:ring-[#A70F2F] outline-none transition bg-neutral-50 {digit ? 'border-[#A70F2F] bg-rose-50/30' : ''}"
               />
             {/each}
@@ -208,7 +206,7 @@
           <!-- Verification CTA -->
           <button 
             type="button" 
-            on:click={proceedLogin}
+            onclick={proceedLogin}
             class="mt-8 h-11 w-full rounded-sm bg-[#A70F2F] text-white font-medium hover:bg-[#8F0D28] transition shadow-xs flex items-center justify-center"
           >
             Verify &amp; Proceed
@@ -217,7 +215,7 @@
           <!-- Resend Dummy Code -->
           <button 
             type="button"
-            on:click={() => { 
+            onclick={() => { 
               generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
               showAutoFillPrompt = true; 
             }}
@@ -236,7 +234,7 @@
           <!-- In normal browsing, Skip is allowed -->
           <button 
             type="button" 
-            on:click={() => goto('/')}
+            onclick={() => goto('/')}
             class="text-base font-medium text-black/60 transition-colors hover:text-black cursor-pointer"
           >
             Skip
@@ -283,14 +281,14 @@
       <div class="mt-2 flex gap-2">
         <button 
           type="button"
-          on:click={() => showAutoFillPrompt = false}
+          onclick={() => showAutoFillPrompt = false}
           class="flex-1 py-2.5 text-xs font-semibold text-gray-600 rounded-lg bg-gray-100 hover:bg-gray-200 transition active:scale-95 cursor-pointer"
         >
           Cancel
         </button>
         <button 
           type="button"
-          on:click={handleAutoFill}
+          onclick={handleAutoFill}
           class="flex-1 py-2.5 text-xs font-bold text-white rounded-lg bg-blue-600 hover:bg-blue-700 shadow-md transition active:scale-95 cursor-pointer flex items-center justify-center gap-1.5"
         >
           <span>Allow Auto-fill</span>
